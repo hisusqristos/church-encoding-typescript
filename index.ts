@@ -1,4 +1,4 @@
-type Boolian = (arg0: any, arg1: any) => any;
+type Բուլյան = (arg0: any, arg1: any) => any;
 
 const թռու = (a: any, b: any) => {
   return a;
@@ -9,14 +9,14 @@ const ֆօլս = (a: any, b: any) => {
 
 // logic
 
-const նօթ = (b: Boolian) => {
+const նօթ = (b: Բուլյան) => {
   return b(ֆօլս, թռու);
 };
 
 console.log(նօթ(թռու) == ֆօլս);
 console.log(նօթ(ֆօլս) == թռու);
 
-const ընդ = (b: Boolian, a: Boolian) => {
+const ընդ = (b: Բուլյան, a: Բուլյան) => {
   return a(թռու, ֆօլս), b(a, ֆօլս);
 };
 
@@ -25,7 +25,7 @@ console.log(ընդ(թռու, ֆօլս) == ֆօլս);
 console.log(ընդ(ֆօլս, թռու) == ֆօլս);
 console.log(ընդ(ֆօլս, ֆօլս) == ֆօլս);
 
-const օռ = (b: Boolian, a: Boolian) => {
+const օռ = (b: Բուլյան, a: Բուլյան) => {
   return b(թռու, ֆօլս), a(թռու, b);
 };
 
@@ -34,7 +34,7 @@ console.log(օռ(թռու, ֆօլս) == թռու);
 console.log(օռ(ֆօլս, թռու) == թռու);
 console.log(օռ(ֆօլս, ֆօլս) == ֆօլս);
 
-const իֆ = (b: Boolian, func1: any, func2: any) => {
+const իֆ = (b: Բուլյան, func1: any, func2: any) => {
   return b(func1, func2);
 };
 
